@@ -1,2 +1,42 @@
 # Disable the startup message
 startup_message off
+
+hardstatus alwayslastline 
+hardstatus string '%{= kG}[ %{G}%H %{g}][%3= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
+
+activity "%C -> %n%f %t activity!"
+bell "%C -> %n%f %t bell!~"
+pow_detach_msg "BYE"
+vbell_msg " *beep* "
+bind .
+bind ^\
+bind \\
+bind ^s
+bind G screen -t 'Google' links www.google.com
+bind K
+bind p paste .
+bind V screen -t 'vim' 1 vim
+bind X lockscreen'
+bindkey -k kP copy'
+bindkey -k k7 prev
+bindkey -k k8 next
+
+
+screen -t main
+screen -t admin
+screen -t dev
+screen -t py
+screen -t server
+screen -t vsql
+screen -t wtflol
+
+
+
+shelltitle "$ |bash"
+
+# THIS IS THE PRETTY BIT
+#change the hardstatus settings to give an window list at the bottom of the                                                                        
+##screen, with the time and date and with the current window highlighted                                                                            
+hardstatus             alwayslastline                                                                                                                          
+#hardstatus string '%{= mK}%-Lw%{= KW}%50>%n%f* %t%{= mK}%+Lw%< %{= kG}%-=%D %d %M %Y %c:%s%{-}'
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %d/%m %{W}%c %{g}]'
