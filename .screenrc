@@ -4,32 +4,34 @@ startup_message off
 hardstatus alwayslastline 
 hardstatus string '%{= kG}[ %{G}%H %{g}][%3= %{=kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B}%Y-%m-%d %{W}%c %{g}]'
 
-activity "%C -> %n%f %t activity!"
-bell "%C -> %n%f %t bell!~"
-pow_detach_msg "BYE"
-vbell_msg " *beep* "
-bind .
-bind ^\
-bind \\
-bind ^s
-bind G screen -t 'Google' links www.google.com
-bind K
-bind p paste .
-bind V screen -t 'vim' 1 vim
-bind X lockscreen'
-bindkey -k kP copy'
-bindkey -k k7 prev
-bindkey -k k8 next
 
 
-screen -t main
 screen -t admin
-screen -t dev
-screen -t py
-screen -t server
-screen -t vsql
-screen -t wtflol
+screen -t ipython
+screen -t vsql-info
+screen -t field-dashboard
+screen -t dt-scripts
+screen -t dt-queries
+screen -t vertica-schemas
+screen -t wtflol	
 
+
+
+
+# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
+bindkey -k k7  prev
+bindkey -k k8  next
+
+startup_message off
+
+# Window list at the bottom.
+hardstatus alwayslastline
+hardstatus string "%-w%{= BW}%50>%n %t%{-}%+w%<"
+
+# From Stephen Shirley
+# Don't block command output if the terminal stops responding
+# (like if the ssh connection times out for example).
+nonblock on
 
 
 shelltitle "$ |bash"
