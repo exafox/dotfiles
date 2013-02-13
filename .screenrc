@@ -6,7 +6,7 @@ shelltitle "$ |bash"
 nonblock on                          
 
 
-# Bind F11 and F12 (NOT F1 and F2) to previous and next screen window
+# Bind F7 and F8 to previous and next screen window
 bindkey -k k7  prev
 bindkey -k k8  next
 
