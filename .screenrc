@@ -14,8 +14,6 @@ bindkey -k k8  next
 screen -t admin
 screen -t log
 screen -t main
-screen -t server1
-screen -t server2
 screen -t wtflol	
 
 hardstatus alwayslastline
